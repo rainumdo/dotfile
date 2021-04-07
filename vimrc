@@ -128,7 +128,7 @@ hi YcmErrorSection ctermbg=0
 hi Error ctermfg=250 ctermbg=88
 hi Folded ctermfg=14 ctermbg=0
 hi MatchParen ctermbg=0
-hi Visual term=reverse ctermbg=242
+hi Visual term=reverse ctermbg=0
 
 """""""""""""""
 "  shortcuts  "
