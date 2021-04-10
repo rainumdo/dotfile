@@ -149,6 +149,7 @@ nnoremap <F5> :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>h :bp<CR>
+nnoremap <leader>d :bd<CR>
 nnoremap <leader><leader><leader> :res<CR>
 
 """"""""""""""
