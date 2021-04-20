@@ -156,7 +156,7 @@ nnoremap <leader><leader><leader> :res<CR>
 "  function  "
 """"""""""""""
 function  MyTranslate()
-	exec "TranslateW"
+	exec "Translate"
 	silent call system('say -v Mei-Jia '.expand("<cword>"))
 endfunction
 
