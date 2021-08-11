@@ -156,8 +156,8 @@ nnoremap <leader><leader><leader> :res<CR>
 "  function  "
 """"""""""""""
 function  MyTranslate()
-	exec "Translate"
-	silent call system('say -v Mei-Jia '.expand("<cword>"))
+	exec "TranslateW"
+	"silent call system('say -v Mei-Jia '.expand("<cword>"))
 endfunction
 
 function Mvn()
@@ -189,3 +189,12 @@ func! CompileRunGcc()
 		exec "!time lua %"
 	endif
 endfunc
+
+"copying to clipboard with windows subsystem for linux
+if system('uname -r') =~ "Microsoft"
+    augroup Yank
+        autocmd!
+        autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+    augroup END
+endif
+
