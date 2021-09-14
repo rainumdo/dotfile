@@ -3,8 +3,7 @@ set -g @plugin 'tmux-plugins/tmux-yank' # vim yank
 set-window-option -g mode-keys vi #可以设置为vi或emacs
 set -g prefix2 C-b #只是用C-b,取消C-a
 bind C-b send-prefix -2
-set -g mouse on # 使用mouse
-
+#set -g mouse on # 使用mouse
 
 # : << EOF
 # https://github.com/gpakosz/.tmux
@@ -57,24 +56,25 @@ tmux_conf_24b_colour=false
 tmux_conf_theme_colour_1="#080808"    # dark gray
 tmux_conf_theme_colour_2="#303030"    # gray
 tmux_conf_theme_colour_3="#8a8a8a"    # light gray
-#tmux_conf_theme_colour_4="#00afff"    # light blue
-tmux_conf_theme_colour_4="#95b0d9"    # light blue
+tmux_conf_theme_colour_4="#00afff"    # light blue
 tmux_conf_theme_colour_5="#ffff00"    # yellow
 tmux_conf_theme_colour_6="#080808"    # dark gray
 tmux_conf_theme_colour_7="#e4e4e4"    # white
 tmux_conf_theme_colour_8="#080808"    # dark gray
 tmux_conf_theme_colour_9="#ffff00"    # yellow
-#tmux_conf_theme_colour_10="#ff00af"   # pink
-tmux_conf_theme_colour_10="#fe5089"   # pink
+tmux_conf_theme_colour_10="#ff00af"   # pink
 tmux_conf_theme_colour_11="#5fff00"   # green
 tmux_conf_theme_colour_12="#8a8a8a"   # light gray
 tmux_conf_theme_colour_13="#e4e4e4"   # white
 tmux_conf_theme_colour_14="#080808"   # dark gray
 tmux_conf_theme_colour_15="#080808"   # dark gray
-#tmux_conf_theme_colour_16="#d70000"   # red
-tmux_conf_theme_colour_16="#a51a46"   # red
-#tmux_conf_theme_colour_17="#e4e4e4"   # white
-tmux_conf_theme_colour_17="#afafaf"   # white
+tmux_conf_theme_colour_16="#d70000"   # red
+tmux_conf_theme_colour_17="#e4e4e4"   # white
+
+#rainumdo theme
+tmux_conf_theme_colour_9="#AFD787"    # yellow
+tmux_conf_theme_colour_4="#95b0d9"    # light blue
+tmux_conf_theme_colour_16="#9d7181"   # red
 
 # default theme (ansi)
 #tmux_conf_theme_colour_1="colour0"
@@ -206,10 +206,10 @@ tmux_conf_theme_window_status_last_attr="none"
 #tmux_conf_theme_left_separator_sub="|"
 #tmux_conf_theme_right_separator_main=""
 #tmux_conf_theme_right_separator_sub="|"
-tmux_conf_theme_left_separator_main="\uE0B0"  # /!\ you don't need to install Powerline
-tmux_conf_theme_left_separator_sub="\uE0B1"   #   you only need fonts patched with
-tmux_conf_theme_right_separator_main="\uE0B2" #   Powerline symbols or the standalone
-tmux_conf_theme_right_separator_sub="\uE0B3"  #   PowerlineSymbols.otf font, see README.md
+tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
 
 # status left/right content:
 #   - separate main sections with "|"
@@ -238,8 +238,10 @@ tmux_conf_theme_right_separator_sub="\uE0B3"  #   PowerlineSymbols.otf font, see
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+#tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+tmux_conf_theme_status_left=" ❐ #S"
+#tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}, %R , %d %b | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -264,7 +266,7 @@ tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
 
 # mouse indicator
-tmux_conf_theme_mouse="🖱"                   # U+2197
+tmux_conf_theme_mouse="↗"                   # U+2197
 tmux_conf_theme_mouse_fg="none"
 tmux_conf_theme_mouse_bg="none"
 tmux_conf_theme_mouse_attr="none"
@@ -314,10 +316,10 @@ tmux_conf_battery_vbar_palette="gradient"
 #tmux_conf_battery_vbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
-tmux_conf_battery_status_charging="↑"       # U+2191
-tmux_conf_battery_status_discharging="↓"    # U+2193
-#tmux_conf_battery_status_charging="🔌"     # U+1F50C
-#tmux_conf_battery_status_discharging="🔋"  # U+1F50B
+#tmux_conf_battery_status_charging="↑"       # U+2191
+#tmux_conf_battery_status_discharging="↓"    # U+2193
+tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
@@ -332,7 +334,7 @@ tmux_conf_theme_clock_style="24"
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=true
+tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
@@ -353,11 +355,12 @@ tmux_conf_copy_to_os_clipboard=true
 # set -gu prefix2
 # unbind C-a
 # unbind C-b
-#set -g prefix C-b
-#bind C-b send-prefix
+# set -g prefix C-a
+# bind C-a send-prefix
 
 # move status line to top
 #set -g status-position top
+
 
 # -- tpm -----------------------------------------------------------------------
 
@@ -402,6 +405,8 @@ tmux_conf_update_plugins_on_reload=true
 
 # # /!\ do not remove the following line
 # EOF
+#
+# # /!\ do not "uncomment" the functions: the leading "# " characters are needed
 #
 # weather() {
 #   curl -m 1 wttr.in?format=3 2>/dev/null
