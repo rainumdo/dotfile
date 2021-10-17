@@ -6,7 +6,7 @@ Plug 'voldikss/vim-translator',{'on':'TranslateW'} "翻译
 Plug 'scrooloose/nerdtree', { 'on':'NERDTreeToggle' }  "树型目录
 Plug 'vim-airline/vim-airline' "美化插件
 Plug 'vim-airline/vim-airline-themes' "主题美化
-Plug 'enricobacis/vim-airline-clock' "时间
+"Plug 'enricobacis/vim-airline-clock' "时间
 Plug 'majutsushi/tagbar',{ 'on':['Tagbar'] } "添加标签页
 Plug 'ryanoasis/vim-devicons' "图标
 Plug 'valloric/youcompleteme' "代码自动补全
