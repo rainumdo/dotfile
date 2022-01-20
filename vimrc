@@ -69,7 +69,12 @@ let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'} "中文引擎
 let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'} "中文引擎
 
 
-"异步
+""""""""""
+"  nerd  "
+""""""""""
+let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
+
+
 syntax enable
 "图标字体
 set guifont=DroidSansMono_Nerd_Font:1
