@@ -143,7 +143,7 @@ let mapleader = " "
 noremap <leader>fzf :FZF<CR>
 nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>t :call MyTranslate()<CR>
-nnoremap <leader><CR> :NERDTreeToggle<CR>
+nnoremap ; :NERDTreeToggle<CR>
 nnoremap <leader>gt :YcmComplete GoTo<CR>
 nnoremap <leader>gd :YcmComplete GetDoc<CR>
 nnoremap <leader>f :Autoformat<CR>
