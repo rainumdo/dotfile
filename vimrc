@@ -110,7 +110,7 @@ set scrolloff=5
 """"""""""""""""
 "  my hilight  "
 """"""""""""""""
-hi Title ctermfg=225
+hi Title ctermfg=181
 hi SpecialKey ctermfg=81
 hi Normal ctermfg=146
 hi NERDTreeFlags ctermfg=105
