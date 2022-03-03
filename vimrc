@@ -1,6 +1,7 @@
 """"""""""
 "  Plug  "
 """"""""""
+"let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
 call plug#begin('~/.vim/plugged')
 Plug 'voldikss/vim-translator',{'on':'TranslateW'} "翻译
 Plug 'scrooloose/nerdtree', { 'on':'NERDTreeToggle' }  "树型目录
