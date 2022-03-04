@@ -77,7 +77,7 @@ let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
 """"""""""""""""
 "  translator  "
 """"""""""""""""
-g:translator_default_engines = ['bing']
+let g:translator_default_engines = ['bing']
 
 syntax enable
 "图标字体
