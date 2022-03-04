@@ -167,7 +167,7 @@ nnoremap <leader><leader><leader> :res<CR>
 "  function  "
 """"""""""""""
 function  MyTranslate()
-	exec "Translate"
+	exec "TranslateW"
 	"silent call system('say -v Mei-Jia '.expand("<cword>"))
 	"https://github.com/technogeek48/winsay
 	silent call system('say.exe -m '.expand("<cword>"))
