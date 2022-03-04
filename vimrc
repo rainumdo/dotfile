@@ -58,7 +58,6 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "let g:UltiSnipsSnippetDirectories=['~/.vim/plugged/vim-snippets/UltiSnips']
 
-
 """"""""""""
 "  vimtex  "
 """"""""""""
@@ -75,6 +74,10 @@ let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'} "中文引擎
 """"""""""
 let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
 
+""""""""""""""""
+"  translator  "
+""""""""""""""""
+g:translator_default_engines = ['bing']
 
 syntax enable
 "图标字体
@@ -164,8 +167,10 @@ nnoremap <leader><leader><leader> :res<CR>
 "  function  "
 """"""""""""""
 function  MyTranslate()
-	exec "TranslateW"
+	exec "Translate"
 	"silent call system('say -v Mei-Jia '.expand("<cword>"))
+	"https://github.com/technogeek48/winsay
+	silent call system('say.exe -m '.expand("<cword>"))
 endfunction
 
 function Mvn()
