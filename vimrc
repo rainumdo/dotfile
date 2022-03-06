@@ -121,8 +121,8 @@ hi NERDTreeFlags ctermfg=105
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
-hi PmenuSel ctermfg=235 ctermbg=146
-hi Pmenu ctermfg=146 ctermbg=235
+hi PmenuSel ctermfg=none ctermbg=60
+hi Pmenu ctermfg=60 ctermbg=146
 hi Directory ctermfg=110
 hi Special ctermfg=110
 hi Function ctermfg=111
@@ -137,8 +137,8 @@ hi Comment ctermfg=244
 hi YcmErrorSection ctermbg=0
 hi Error ctermfg=250 ctermbg=88
 hi Folded ctermfg=14 ctermbg=0
-hi MatchParen ctermbg=0
-hi Visual term=reverse ctermbg=235
+hi MatchParen ctermbg=245
+hi Visual term=reverse ctermbg=60
 
 
 """""""""""""""
