@@ -121,8 +121,8 @@ hi NERDTreeFlags ctermfg=105
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
-hi PmenuSel ctermfg=240 ctermbg=146
-hi Pmenu ctermfg=146 ctermbg=none
+hi PmenuSel ctermfg=235 ctermbg=146
+hi Pmenu ctermfg=146 ctermbg=235
 hi Directory ctermfg=110
 hi Special ctermfg=110
 hi Function ctermfg=111
