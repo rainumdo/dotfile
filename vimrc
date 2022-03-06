@@ -115,22 +115,22 @@ set scrolloff=5
 "  my hilight  "
 """"""""""""""""
 hi Title ctermfg=181
+hi Normal ctermfg=147
 hi SpecialKey ctermfg=81
-hi Normal ctermfg=146
 hi NERDTreeFlags ctermfg=105
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
-hi PmenuSel ctermfg=none ctermbg=60
-hi Pmenu ctermfg=60 ctermbg=146
+hi PmenuSel ctermfg=232 ctermbg=218
+hi Pmenu ctermfg=218 ctermbg=none
 hi Directory ctermfg=110
-hi Special ctermfg=110
+hi Special ctermfg=111
 hi Function ctermfg=111
 hi Include ctermfg=110
-hi Constant ctermfg=132
+hi Constant ctermfg=181
 hi Search ctermfg=0 ctermbg=181
 hi IncSearch cterm=reverse ctermfg=181
-hi Statement ctermfg=182
+hi Statement ctermfg=183
 hi Type ctermfg=133
 hi LineNr ctermfg=242
 hi Comment ctermfg=244
