@@ -79,6 +79,8 @@ let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
 """"""""""""""""
 let g:translator_default_engines = ['bing']
 
+
+"语法高亮
 syntax enable
 "图标字体
 set guifont=DroidSansMono_Nerd_Font:1
@@ -156,7 +158,7 @@ nnoremap <leader>f :Autoformat<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>mvn :call Mvn()
-nnoremap <F5> :call CompileRunGcc()<CR>
+nnoremap cp :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>h :bp<CR>
@@ -210,4 +212,3 @@ if system('uname -r') =~ "Microsoft"
         autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
     augroup END
 endif
-
