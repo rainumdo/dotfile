@@ -8,7 +8,6 @@ Plug 'scrooloose/nerdtree', { 'on':'NERDTreeToggle' }  "树型目录
 Plug 'vim-airline/vim-airline' "美化插件
 Plug 'vim-airline/vim-airline-themes' "主题美化
 "Plug 'enricobacis/vim-airline-clock' "时间
-Plug 'majutsushi/tagbar',{ 'on':['Tagbar'] } "添加标签页
 Plug 'ryanoasis/vim-devicons' "图标
 Plug 'valloric/youcompleteme' "代码自动补全
 Plug 'honza/vim-snippets' "补全
@@ -17,8 +16,9 @@ Plug 'chun-yang/auto-pairs' "括号
 Plug 'tpope/vim-surround' "括号
 Plug 'sudar/comments.vim' "注释
 Plug 'chiel92/vim-autoformat',{'on':'Autoformat'} "代码格式化
-Plug 'junegunn/fzf',{'on':'FZF'} "fuzzy finder
-Plug 'rking/ag.vim',{'on':'Ag'}
+Plug 'junegunn/fzf',{'on':'FZF'} "sudo apt install fzf
+Plug 'rking/ag.vim',{'on':'Ag'} "sudo apt-get install silversearcher-ag
+Plug 'majutsushi/tagbar',{ 'on':['Tagbar'] } "sudo apt install universal-ctags
 Plug 'lervag/vimtex', { 'for':'tex' } "latex
 Plug 'tweekmonster/startuptime.vim', {'on':['StartupTime']} "启动时间
 call plug#end()
@@ -111,6 +111,8 @@ set shiftwidth=4
 set wildmenu
 "设置光标距离窗口最下面的最小行数
 set scrolloff=5
+"不自动换行
+"set nowrap
 
 
 """"""""""""""""
