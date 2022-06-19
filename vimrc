@@ -132,8 +132,8 @@ hi Special ctermfg=111
 hi Function ctermfg=111
 hi Include ctermfg=110
 hi Constant ctermfg=181
-hi Search ctermfg=181 ctermbg=243
-hi IncSearch cterm=reverse ctermfg=181
+hi Search ctermfg=226 ctermbg=243
+hi IncSearch cterm=reverse ctermfg=226
 hi Statement ctermfg=183
 hi Type ctermfg=133
 hi LineNr ctermfg=242
