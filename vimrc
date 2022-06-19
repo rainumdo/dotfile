@@ -4,7 +4,7 @@
 "let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
 call plug#begin('~/.vim/plugged')
 Plug 'voldikss/vim-translator',{'on':'TranslateW'} "翻译
-Plug 'scrooloose/nerdtree', { 'on':'NERDTreeToggle' }  "树型目录
+Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}  "树型目录
 Plug 'vim-airline/vim-airline' "美化插件
 Plug 'vim-airline/vim-airline-themes' "主题美化
 "Plug 'enricobacis/vim-airline-clock' "时间
@@ -18,8 +18,8 @@ Plug 'sudar/comments.vim' "注释
 Plug 'chiel92/vim-autoformat',{'on':'Autoformat'} "代码格式化
 Plug 'junegunn/fzf',{'on':'FZF'} "sudo apt install fzf
 Plug 'rking/ag.vim',{'on':'Ag'} "sudo apt-get install silversearcher-ag
-Plug 'majutsushi/tagbar',{ 'on':['Tagbar'] } "sudo apt install universal-ctags
-Plug 'lervag/vimtex', { 'for':'tex' } "latex
+Plug 'majutsushi/tagbar',{'on':['Tagbar']} "sudo apt install universal-ctags
+Plug 'lervag/vimtex', {'for':'tex'} "latex
 Plug 'tweekmonster/startuptime.vim', {'on':['StartupTime']} "启动时间
 call plug#end()
 
