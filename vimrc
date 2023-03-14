@@ -160,7 +160,7 @@ nnoremap <leader>f :Autoformat<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>mvn :call Mvn()
-nnoremap cp :call CompileRunGcc()<CR>
+nnoremap run :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>h :bp<CR>
@@ -208,9 +208,9 @@ func! CompileRunGcc()
 endfunc
 
 "copying to clipboard with windows subsystem for linux
-if system('uname -r') =~ "Microsoft"
-    augroup Yank
-        autocmd!
-        autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
-    augroup END
+if system('uname -r') =~ "microsoft"
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+  augroup END
 endif
