@@ -92,6 +92,8 @@ set nu
 set hlsearch
 "设置搜索增强
 set incsearch
+"设置忽略大小写
+set ignorecase
 "mac 退格键失效
 set backspace=2
 "使用鼠标
