@@ -162,7 +162,7 @@ nnoremap <leader>f :Autoformat<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 "nnoremap <leader>mvn :call Mvn()
-nnoremap <leader>4 :call CompileRunGcc()<CR>
+nnoremap <leader>r :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>h :bp<CR>
