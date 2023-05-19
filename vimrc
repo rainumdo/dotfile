@@ -103,7 +103,7 @@ set showcmd
 "闪烁
 "set vb
 "设置使用系统剪切板
-set clipboard=unnamed
+set clipboard=unnamedplus
 "设置tab显示为4个空格
 set tabstop=4
 "设置手动输入tab为4个空格
