@@ -165,6 +165,8 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>r :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
 nnoremap <leader>f :buffer<Space>
+nnoremap <leader>h :bp<CR>
+nnoremap <leader>l :bn<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader><leader><leader> :res<CR>
 
