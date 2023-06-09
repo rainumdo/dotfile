@@ -62,7 +62,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "  vimtex  "
 """"""""""""
 let g:tex_flavor = 'latex' "文件后缀
-let g:vimtex_view_method='skim' "视图程序
 "let g:vimtex_view_method='mupdf' "视图程序
 let g:vimtex_mappings_enabled = 1 "使用自带快捷键
 let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'} "中文引擎
