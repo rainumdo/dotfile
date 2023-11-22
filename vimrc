@@ -64,8 +64,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:tex_flavor = 'latex' "文件后缀
 "let g:vimtex_view_method='mupdf' "视图程序
 let g:vimtex_mappings_enabled = 1 "使用自带快捷键
-let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'} "中文引擎
-let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'} "中文引擎
+"中文支持
+"let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'} 
+"let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'} 
 
 
 """"""""""
@@ -80,7 +81,7 @@ let g:translator_default_engines = ['bing']
 
 
 "语法高亮
-syntax enable
+syntax on
 "图标字体
 set guifont=DroidSansMono_Nerd_Font:1
 "设置相对行号
@@ -115,14 +116,14 @@ set scrolloff=5
 "不自动换行
 "set nowrap
 
-
-""""""""""""""""
-"  my hilight  "
-""""""""""""""""
-hi Title ctermfg=181
+"""""""""""""""
+"  highlight  "
+"""""""""""""""
+colorscheme default
 hi Normal ctermfg=147
 hi SpecialKey ctermfg=81
 hi NERDTreeFlags ctermfg=105
+hi Type ctermfg=133
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
@@ -132,11 +133,11 @@ hi Directory ctermfg=110
 hi Special ctermfg=111
 hi Function ctermfg=111
 hi Include ctermfg=110
-hi Constant ctermfg=181
+hi Constant ctermfg=180
+hi Title ctermfg=180
 hi Search ctermfg=226 ctermbg=243
 hi IncSearch cterm=reverse ctermfg=226
 hi Statement ctermfg=183
-hi Type ctermfg=133
 hi LineNr ctermfg=242
 hi Comment ctermfg=244
 hi YcmErrorSection ctermbg=0
@@ -144,14 +145,14 @@ hi Error ctermfg=250 ctermbg=88
 hi Folded ctermfg=14 ctermbg=0
 hi MatchParen ctermbg=245
 hi Visual term=reverse ctermbg=60
-
+hi Identitier ctermfg=110
 
 """""""""""""""
 "  shortcuts  "
 """""""""""""""
 let mapleader = " "
 noremap <leader>fzf :FZF<CR>
-nnoremap <leader>ag :Ag<Space>
+"nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>t :call MyTranslate()<CR>
 nnoremap ; :NERDTreeToggle<CR>
 nnoremap <leader>gt :YcmComplete GoTo<CR>
