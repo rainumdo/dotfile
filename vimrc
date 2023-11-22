@@ -120,7 +120,11 @@ set scrolloff=5
 "  highlight  "
 """""""""""""""
 colorscheme default
+hi Statement ctermfg=162
+hi Function ctermfg=175
 hi Normal ctermfg=147
+hi Constant ctermfg=97
+hi Special ctermfg=111
 hi SpecialKey ctermfg=81
 hi NERDTreeFlags ctermfg=105
 hi Type ctermfg=133
@@ -130,14 +134,10 @@ hi WildMenu ctermfg=0 ctermbg=110
 hi PmenuSel ctermfg=232 ctermbg=218
 hi Pmenu ctermfg=218 ctermbg=none
 hi Directory ctermfg=110
-hi Special ctermfg=111
-hi Function ctermfg=111
 hi Include ctermfg=110
-hi Constant ctermfg=180
-hi Title ctermfg=180
+hi Title ctermfg=181
 hi Search ctermfg=226 ctermbg=243
 hi IncSearch cterm=reverse ctermfg=226
-hi Statement ctermfg=183
 hi LineNr ctermfg=242
 hi Comment ctermfg=244
 hi YcmErrorSection ctermbg=0
