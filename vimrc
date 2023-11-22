@@ -120,14 +120,14 @@ set scrolloff=5
 "  highlight  "
 """""""""""""""
 colorscheme default
-hi Statement ctermfg=162
-hi Function ctermfg=175
 hi Normal ctermfg=147
+hi Statement ctermfg=134
+hi Function ctermfg=175
+hi Type ctermfg=139
 hi Constant ctermfg=97
 hi Special ctermfg=111
 hi SpecialKey ctermfg=81
 hi NERDTreeFlags ctermfg=105
-hi Type ctermfg=133
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
