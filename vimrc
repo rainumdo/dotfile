@@ -9,7 +9,8 @@ Plug 'vim-airline/vim-airline' "美化插件
 Plug 'vim-airline/vim-airline-themes' "主题美化
 "Plug 'enricobacis/vim-airline-clock' "时间
 Plug 'ryanoasis/vim-devicons' "图标
-Plug 'valloric/youcompleteme' "代码自动补全
+"Plug 'valloric/youcompleteme' "代码自动补全
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "代码补全
 Plug 'honza/vim-snippets' "补全
 Plug 'sirver/ultisnips' "补全
 Plug 'chun-yang/auto-pairs' "括号
@@ -35,21 +36,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "let airline#extensions#lsp#show_line_numbers = 1
 let g:airline#extensions#clock#format = '%H:%M:%S'
 
-"""""""""""""""""""
-"  youcompleteme  "
-"""""""""""""""""""
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
-set completeopt=menu,menuone
-let g:ycm_add_preview_to_completeopt = 0
-"let g:ycm_auto_trigger = 2 "not to load .ycm_extra_conf
-let g:ycm_key_invoke_completion = '<c-j>'
-let g:ycm_key_list_stop_completion = ['<c-k>']
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/youcompleteme/third_party/ycmd/.ycm_extra_conf.py' "C++ boost
-
 """"""""""""""
 "  snippets  "
 """"""""""""""
@@ -67,7 +53,6 @@ let g:vimtex_mappings_enabled = 1 "使用自带快捷键
 "中文支持
 "let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'} 
 "let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'} 
-
 
 """"""""""
 "  nerd  "
@@ -131,8 +116,9 @@ hi NERDTreeFlags ctermfg=105
 hi Structure ctermfg=105
 hi PreProc ctermfg=110
 hi WildMenu ctermfg=0 ctermbg=110
-hi PmenuSel ctermfg=232 ctermbg=218
 hi Pmenu ctermfg=218 ctermbg=none
+hi PmenuSel ctermfg=none ctermbg=218
+hi PmenuSbar ctermbg=218
 hi Directory ctermfg=110
 hi Include ctermfg=110
 hi Title ctermfg=181
@@ -146,6 +132,9 @@ hi Folded ctermfg=14 ctermbg=0
 hi MatchParen ctermbg=245
 hi Visual term=reverse ctermbg=60
 hi Identitier ctermfg=110
+hi CocMenuSel ctermbg=236
+hi CocInlayHint ctermbg=none 
+hi SignColumn ctermbg=none
 
 """""""""""""""
 "  shortcuts  "
@@ -155,8 +144,6 @@ noremap <leader>fzf :FZF<CR>
 "nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>t :call MyTranslate()<CR>
 nnoremap ; :NERDTreeToggle<CR>
-nnoremap <leader>gt :YcmComplete GoTo<CR>
-nnoremap <leader>gd :YcmComplete GetDoc<CR>
 nnoremap <leader>f :Autoformat<CR>
 "nnoremap re :VimspectorReset
 nnoremap <leader>w :w<CR>
@@ -168,7 +155,7 @@ nnoremap <leader>f :buffer<Space>
 nnoremap <leader>h :bp<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>d :bd<CR>
-nnoremap <leader><leader><leader> :res<CR>
+inoremap <silent><expr> <tab> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<tab>"
 
 """"""""""""""
 "  function  "
