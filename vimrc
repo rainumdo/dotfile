@@ -1,22 +1,19 @@
 """"""""""
 "  Plug  "
 """"""""""
-"let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
 call plug#begin('~/.vim/plugged')
 Plug 'voldikss/vim-translator',{'on':'TranslateW'} "翻译
 Plug 'scrooloose/nerdtree', {'on':'NERDTreeToggle'}  "树型目录
 Plug 'vim-airline/vim-airline' "美化插件
 Plug 'vim-airline/vim-airline-themes' "主题美化
-"Plug 'enricobacis/vim-airline-clock' "时间
 Plug 'ryanoasis/vim-devicons' "图标
 "Plug 'valloric/youcompleteme' "代码自动补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "代码补全
-Plug 'honza/vim-snippets' "补全
+Plug 'honza/vim-snippets' "补全格式
 Plug 'sirver/ultisnips' "补全
+Plug 'scrooloose/nerdcommenter' "注释
 Plug 'chun-yang/auto-pairs' "括号
 Plug 'tpope/vim-surround' "括号
-Plug 'sudar/comments.vim' "注释
-Plug 'chiel92/vim-autoformat',{'on':'Autoformat'} "代码格式化
 Plug 'junegunn/fzf',{'on':'FZF'} "sudo apt install fzf
 Plug 'rking/ag.vim',{'on':'Ag'} "sudo apt-get install silversearcher-ag
 Plug 'majutsushi/tagbar',{'on':['Tagbar']} "sudo apt install universal-ctags
@@ -34,7 +31,7 @@ let g:Powerline_symbols='fancy'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 "let airline#extensions#lsp#show_line_numbers = 1
-let g:airline#extensions#clock#format = '%H:%M:%S'
+"let g:airline#extensions#clock#format = '%H:%M:%S'
 
 """"""""""""""
 "  snippets  "
@@ -99,7 +96,7 @@ set wildmenu
 "设置光标距离窗口最下面的最小行数
 set scrolloff=5
 "不自动换行
-"set nowrap
+set nowrap
 
 """""""""""""""
 "  highlight  "
@@ -155,7 +152,6 @@ nnoremap <leader>f :buffer<Space>
 nnoremap <leader>h :bp<CR>
 nnoremap <leader>l :bn<CR>
 nnoremap <leader>d :bd<CR>
-inoremap <silent><expr> <tab> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<tab>"
 
 """"""""""""""
 "  function  "
