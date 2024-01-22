@@ -96,7 +96,7 @@ set wildmenu
 "设置光标距离窗口最下面的最小行数
 set scrolloff=5
 "不自动换行
-set nowrap
+"set nowrap
 
 """""""""""""""
 "  highlight  "
@@ -141,17 +141,19 @@ noremap <leader>fzf :FZF<CR>
 "nnoremap <leader>ag :Ag<Space>
 nnoremap <leader>t :call MyTranslate()<CR>
 nnoremap ; :NERDTreeToggle<CR>
-nnoremap <leader>f :Autoformat<CR>
 "nnoremap re :VimspectorReset
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 "nnoremap <leader>mvn :call Mvn()
 nnoremap <leader>r :call CompileRunGcc()<CR>
 nnoremap rc :edit ~/.vim/vimrc<CR>
-nnoremap <leader>f :buffer<Space>
-nnoremap <leader>h :bp<CR>
-nnoremap <leader>l :bn<CR>
+nnoremap <leader>b :buffer<Space>
+nnoremap <leader>p :bp<CR>
+nnoremap <leader>n :bn<CR>
 nnoremap <leader>d :bd<CR>
+nnoremap <leader>f :call CocActionAsync("format")<CR>
+nnoremap <leader>h :call CocActionAsync("doHover")<CR>
+map <leader>c <plug>NERDCommenterToggle
 
 """"""""""""""
 "  function  "
