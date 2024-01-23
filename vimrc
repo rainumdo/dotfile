@@ -153,6 +153,7 @@ nnoremap <leader>n :bn<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>f :call CocActionAsync("format")<CR>
 nnoremap <leader>h :call CocActionAsync("doHover")<CR>
+nnoremap <leader>jd :call CocActionAsync("jumpDefinition")<CR>
 map <leader>c <plug>NERDCommenterToggle
 
 """"""""""""""
