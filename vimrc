@@ -151,6 +151,8 @@ nnoremap <leader>b :buffer<Space>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>d :bd<CR>
+nnoremap J <C-D>
+nnoremap K <C-U>
 nnoremap <leader>f :call CocActionAsync("format")<CR>
 nnoremap <leader>h :call CocActionAsync("doHover")<CR>
 nnoremap <leader>jd :call CocActionAsync("jumpDefinition")<CR>
