@@ -163,9 +163,12 @@ map <leader>c <plug>NERDCommenterToggle
 """"""""""""""
 function  MyTranslate()
 	exec "TranslateW"
-	"silent call system('say -v Mei-Jia '.expand("<cword>"))
+
+	"sudo apt-get install espeak
+	silent call system('espeak -v female1 -p 99 '.expand("<cword>"))
+	
 	"https://github.com/technogeek48/winsay
-	silent call system('say.exe -m '.expand("<cword>"))
+	"silent call system('say.exe -m '.expand("<cword>"))
 endfunction
 
 function Mvn()
