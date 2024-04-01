@@ -24,7 +24,7 @@ call plug#end()
 """""""""""""
 "  airline  "
 """""""""""""
-let laststatus = 2
+"let laststatus = 2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
 let g:Powerline_symbols='fancy'
@@ -54,7 +54,7 @@ let g:vimtex_mappings_enabled = 1 "使用自带快捷键
 """"""""""
 "  nerd  "
 """"""""""
-let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
+"let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
 
 """"""""""""""""
 "  translator  "
@@ -175,7 +175,7 @@ function Mvn()
 	exec '!mvn archetype:generate -DarchetypeCatalog=internal'
 endfunction
 
-func! CompileRunGcc()
+function! CompileRunGcc()
 	exec "w"
 	if &filetype == 'c'
 		exec "!g++ % -o %<"
@@ -189,7 +189,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'sh'
 		:!time bash %
 	elseif &filetype == 'python'
-		exec "!time python3 %"
+		exec "!time python3 % "
 	elseif &filetype == 'html'
 		exec "!open % &"
 	elseif &filetype == 'go'
@@ -199,7 +199,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'lua'
 		exec "!time lua %"
 	endif
-endfunc
+endfunction
 
 "copying to clipboard with windows subsystem for linux
 if system('uname -r') =~ "microsoft"
