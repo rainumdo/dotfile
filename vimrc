@@ -54,7 +54,8 @@ let g:vimtex_mappings_enabled = 1 "使用自带快捷键
 """"""""""
 "  nerd  "
 """"""""""
-"let g:NERDTreeSortOrder = ['\/$', '*', '[[-timestamp]]']
+let g:NERDTreeSortOrder = ['\/$', '.*', '[[-timestamp]]']
+let NERDTreeIgnore = ['\.meta$']
 
 """"""""""""""""
 "  translator  "
