@@ -1,9 +1,9 @@
 return {
   --
   {
-    "ianva/vim-youdao-translater",
+    "voldikss/vim-translate-me",
     keys = {
-      { "<leader>t", ":<C-u>Ydc<CR>", desc = "translater with youdao" },
+      { "<leader>t", ":TranslateW<CR>", desc = "translate" },
     },
   },
 }
