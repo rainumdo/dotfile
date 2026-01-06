@@ -191,6 +191,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "wgsl-analyzer",
       },
     },
   },

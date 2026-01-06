@@ -9,3 +9,5 @@ if vim.filetype == "rust" or "c" then
 end
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.scrolloff = 5
