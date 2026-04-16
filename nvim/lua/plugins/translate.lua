@@ -14,7 +14,7 @@ local function my_translate()
   vim.fn.system(cmd)
 end
 
-vim.keymap.set("n", "<leader>t", my_translate)
+vim.keymap.set("n", "<leader>t", my_translate, { desc = "my translator" })
 
 return {
   {
